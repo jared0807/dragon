@@ -1,0 +1,274 @@
+/* DEX.module.css */
+.dexContainer {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-self: center;
+  padding: 20px; /* Added padding for smaller screens */
+  color: #fff; /* Assuming you want white text color */
+}
+
+.dexHeading {
+  font-size: 2rem; /* Size for larger screens */
+  margin-bottom: 20px;
+  color: #fff; /* White text for headings */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dexHeading {
+    font-size: 1.5rem; /* Smaller font size for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .dexHeading {
+    font-size: 1.25rem; /* Even smaller font size for small screens */
+  }
+}
+
+
+.chartSwapperContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.poolTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensures rounded corners */
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff; /* White text */
+  margin-bottom: 20px;
+}
+
+.poolTable th, .poolTable td {
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.poolTable tfoot td {
+  font-size: 1.2rem; /* Larger text for totals */
+  color: #fff; /* White text */
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Pool links styling */
+.poolTable a {
+  color: #fff; /* White text */
+  text-decoration: none;
+}
+
+.poolTable a:hover {
+  color: #3e8e41; /* Green on hover */
+  text-decoration: underline;
+}
+
+/* Animation for totals */
+@keyframes highlightChange {
+  0% { color: red; }
+  100% { color: #4CAF50; }
+}
+
+.highlightChange {
+  animation: highlightChange 2s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .chartSwapperContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .poolTable th, .poolTable td {
+    padding: 10px;
+  }
+
+  .poolTable tfoot td {
+    font-size: 1rem;
+  }
+}
+.container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff; /* White text */
+  padding: 32px;
+  border-radius: 15px;
+  margin: auto;
+  width: fit-content;
+  padding-top: 196px; /* Adjust this value to match your header's height */
+	background: linear-gradient(
+			to bottom,
+			var(--color-bg),
+			transparent,
+			var(--color-bg)
+		),
+		radial-gradient(circle, transparent 0%, var(--color-bg) 70%);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logoAddress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+  
+}
+
+.logoSection {
+  margin-right: 15px;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.addressLink {
+  color: #4CAF50; /* Green link */
+  text-decoration: none;
+}
+
+.addressLink:hover {
+  text-decoration: underline;
+}
+
+.infoSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 15px;
+  text-align: left;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.infoLabel {
+  font-size: 1rem;
+  color: #aaa; /* Lighter color for the label */
+  margin-right: 10px;
+}
+
+.keyInfo {
+  font-size: 1.2rem;
+  background-color: #66974C; /* Slightly darker background for each info */
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* ... rest of the existing styles */
+
+@media (max-width: 768px) {
+  /* ... responsive adjustments */
+}
+@media (max-width: 768px) {
+  .infoSection {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+}
+
+.addressSection a {
+  color: black;
+  background-color: #66974C; /* Green background */
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  margin: 10px;
+
+}
+
+.addressSection a:hover {
+  background-color: #3e8e41; /* Darker green on hover */
+}
+
+.timer {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #66974C;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.infoWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.infoSection {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.mainContent {
+  display: flex;
+}
+
+.stats {
+  flex-basis: 33%;
+  margin: 10px;
+  /* Other styles as needed */
+}
+
+.socialContainer {
+  flex-basis: 66%;
+  background-color: #66974C;
+  border-radius: 15px;
+  margin: 10px;
+  /* Other styles as needed */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logoImage {
+  height: 40px; /* Adjust size as needed */
+  width: auto;
+  margin: 10px 10px;
+  
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .infoSection {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  .socialContainer, .row {
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+
+  .logoImage {
+      margin-bottom: 10px; /* Additional margin for wrapped logos */
+  }
+}

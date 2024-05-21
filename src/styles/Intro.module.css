@@ -1,0 +1,79 @@
+.container {
+  padding-top:113px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 14px;
+}
+
+.overview{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url('/coins-bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  max-width: 36rem;
+}
+
+.header {
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 2rem;
+  color: #66974C;
+}
+
+.keyInfo {
+  font-size: 1.2rem;
+  color: #3e8e41;
+  margin: 10px 0;
+}
+
+.logoAddress {
+  display: flex;
+  align-items: center;
+}
+
+.logoSection {
+  margin-right: 20px;
+}
+
+.addressSection a {
+  color: black;
+  background-color: #66974C; /* Green background */
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.addressSection a:hover {
+  background-color: #3e8e41; /* Darker green on hover */
+}
+
+.timer {
+  background-color: #333; /* Dark background for timer */
+  color: #fff; /* White text */
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 1.5rem; /* Larger font size for timer */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timer {
+    margin-top: 20px;
+    width: 100%;
+  }
+}

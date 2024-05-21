@@ -1,0 +1,259 @@
+.main {
+	display: grid;
+	place-items: center;
+	height: 100%;
+	padding-top: 80px; /* Adjust this value to match your header's height */
+	background: linear-gradient(
+			to bottom,
+			var(--color-bg),
+			transparent,
+			var(--color-bg)
+		),
+		radial-gradient(circle, transparent 0%, var(--color-bg) 70%);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+	padding-bottom: 1.75rem;
+	position: fixed; /* Keeps the header fixed at the top */
+	top: 0; /* Aligns the header at the top */
+	left: 0; /* Aligns the header to the left */
+	right: 0; /* Ensures the header spans the full width */
+	z-index: 111111; /* Ensures the header stays above other content */
+	background-color: var(--color-bg); /* Adjust as needed, maybe same as page background */
+	
+	/* Rest of your styling */
+  }
+
+.header .buttons {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+
+.wrapper {
+	position: relative;
+	border: 1px solid var(--color-primary);
+	border-radius: var(--rounded-md);
+	background: hsl(var(--h), 1%, 10%);
+	max-width: clamp(20rem, 90%, 40rem);
+	box-shadow: var(--shadow-lg);
+}
+
+.wrapper::after {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	filter: blur(100px);
+	background: linear-gradient(95deg, #7baff3, #3f8ef6, #0b2c56, #4e70d0);
+	background-size: 200% 200%;
+	animation: animateGlow 5s linear infinite;
+}
+
+.wrapper li {
+    color: var(--color-grey-400);
+    line-height: 1.75;
+    list-style-type: none; /* This line removes the bullets */
+}
+
+/* If you have nested lists and only want to remove bullets for the top-level list items */
+.wrapper > ul > li {
+    list-style-type: none;
+}
+
+
+.content {
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+	margin-bottom: 20px; /* Spacing between sections */
+  }
+  
+  .content h2 {
+	color: #c9c9c9;
+	margin-bottom: 15px;
+  }
+  
+  .infoRow {
+	border: 1px solid #ddd; /* Subtle borders for each row */
+	padding: 10px 15px;
+	border-radius: 5px;
+	margin-bottom: 10px; /* Spacing between rows */
+	display: flex;
+	justify-content: space-between; /* Align content and value */
+	align-items: center;
+  }
+  
+  .infoRow span {
+	font-weight: normal;
+	color: #555;
+	margin-right: 10px;
+  }
+  
+  .infoRow .value {
+	color: #1a73e8; /* Highlight values */
+	font-weight: normal;
+  }
+  
+  .infoRow.balanceRow {
+	margin-bottom: 30px; /* Increased bottom margin for Balance row */
+  }
+
+.wrapperFooter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	background-color: hsla(var(--h), var(--s), 22%, 0.5);
+	border-top: 1px solid hsl(var(--h), var(--s), 20%);
+	border-radius: 0 0 var(--rounded-md) var(--rounded-md);
+	font-size: 0.875rem;
+	white-space: pre;
+	color: var(--color-grey-700);
+}
+
+.wrapperFooter svg {
+	margin-right: 0.25rem;
+}
+
+.wrapperFooter a {
+	color: inherit;
+	text-decoration: none;
+	text-underline-offset: 0.125rem;
+}
+
+.wrapperFooter a:hover {
+	color: var(--color-grey-500);
+}
+
+.wrapperFooter svg:has(+ a:hover) {
+	color: var(--color-grey-500) !important;
+}
+
+.container {
+	padding: 2rem 2.25rem;
+}
+
+.wrapper li {
+	color: var(--color-grey-400);
+	line-height: 1.75;
+}
+
+.wrapper li:not(:first-child) {
+	margin-top: 1rem;
+}
+
+.main h1 {
+	font-size: 1.75rem;
+	font-weight: normal;
+}
+
+span.button {
+	position: relative;
+	display: inline-flex;
+	vertical-align: bottom;
+	align-items: center;
+	justify-content: center;
+	gap: 0.375rem;
+	padding: 0.375rem 0.675rem;
+	margin: 0 0.25rem;
+	font-size: 0.875rem;
+	border-radius: var(--rounded-sm);
+	background-color: hsl(var(--h), var(--s), 20%);
+	border: 1px solid hsl(var(--h), var(--s), 22%);
+	color: inherit;
+	line-height: 1;
+	box-shadow: var(--shadow-md);
+	cursor: pointer;
+	user-select: none;
+	transition: all 0.1s;
+}
+
+
+span.button:hover {
+	background-color: hsl(var(--h), var(--s), 30%);
+	border: 1px solid hsl(var(--h), var(--s), 32%);
+	color: var(--color-grey-100);
+}
+
+.backdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 4;
+	pointer-events: none;
+	background: hsla(0, 0%, 4%, 0.75);
+	transition: opacity 0.2s;
+}
+
+@keyframes animateGlow {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 200% 50%;
+	}
+}
+
+.spacer {
+	height: 50px; /* Or whatever height you prefer for spacing */
+  }
+  
+  
+  .logoContainer {
+	display: flex;
+	align-items: center;
+	/* Add any additional styling as needed */
+  }
+  
+  .logoTextContainer {
+	margin-left: 10px;
+	display:block
+  }
+  
+  .logoTitle {
+	font-size: 28px; /* Increased size for the main title */
+	color: black; /* Black color for the title */
+	margin: 0;
+	font-weight:normal;
+  }
+  
+  .logoSubtitle {
+	font-size: 18px; /* Larger size for the subtitle */
+	color: #cbcbcb; /* Black color for the subtitle */
+	margin: 0;
+	font-weight: normal; /* Making subtitle bold */
+  }
+
+  .menuLink{
+	display: flex;
+	align-items: center;
+	gap: 2px;
+  }
+
+  .menuLink a {
+	color: black;
+	/* background-color: #66974C; Green background */
+	padding: 10px 15px;
+	border-radius: 8px;
+	text-decoration: none;
+	font-weight: normal;
+	transition: background-color 0.3s ease;
+	/* margin-top: 10px; */
+	/* margin: 10px; */
+  }
+  
+  .menuLink a:hover {
+	color: #3c3c3c;
+  }
